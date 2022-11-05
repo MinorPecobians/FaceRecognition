@@ -19,3 +19,4 @@ the actual implementation is described along with code snippets and screenshots.
 3. Our project aims at making the tasks of the library easy and to make the book issuing and returning process more interactive and effortless for the user. Also, our system is responsible for preserving the details of book issue and return and paperless report generation.
 
 
+# Front

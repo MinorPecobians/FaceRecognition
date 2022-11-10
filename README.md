@@ -1,4 +1,4 @@
-# FaceRecognition
+# Library Assist
 Despite the increasing availability of digital books, many still choose to
 read physical books, and here comes the concept of borrowing a book from the library. Various
 manual tasks such as asking for a desired book to librarian, checking if a book is available, keeping a

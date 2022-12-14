@@ -28,16 +28,12 @@ for cl in mylist:
 
 encoded_face_train = findEncodings(images)
 
-
-
-
 cap  = cv2.VideoCapture(0)
 
 # infinite loop to keep capturing the frames 
 while True:
 
     success, img = cap.read()
-
 
     imgS = cv2.resize(img, (0,0), None, 0.25,0.25)
     imgS = cv2.cvtColor(imgS, cv2.COLOR_BGR2RGB)

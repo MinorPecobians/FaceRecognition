@@ -28,5 +28,10 @@ def index():
     """Video streaming home page."""
     return render_template('index.html')
 
+@app.route('/form')
+def form():
+    """Form"""
+    return render_template('form.html')
+
 if __name__ == "__main__":
     app.run(debug = True)

@@ -9,8 +9,15 @@
 </head>
 
 <body>
-    <h1>Hello, I am index.html</h1>
-    <a href="{{ url_for('form') }}">Click Here</a>
+    <div class="container">
+        <div class="uppercase text-6xl text-center w-full font-serif">Library Assist</div>
+        <a href="{{ url_for('form') }}" class="text-blue-500 font-semibold">Click Here To view form</a>
+
+        <div>
+            <div>Here's a webcam for you</div>
+            <img src="{{ url_for('video_feed') }}"></img>
+        </div>
+    </div>
 </body>
 
 </html>

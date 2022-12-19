@@ -2,6 +2,7 @@ from flask import Flask, render_template, Response
 import cv2
 import face_recognition
 from PIL import Image, ImageDraw
+import numpy as np
 
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)
@@ -78,10 +79,10 @@ def gen_frames():  # generate frame by frame from camera
                 font = cv2.FONT_HERSHEY_DUPLEX
                 cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
+                ret, buffer = cv2.imencode('.jpg', frame)
+                frame = buffer.tobytes()
+                yield (b'--frame\r\n'
+                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # concat frame one by one and show result
 
 
 @app.route('/video_feed')

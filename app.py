@@ -6,10 +6,10 @@ from PIL import Image, ImageDraw
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)
 
-image_of_virat = face_recognition.load_image_file('./img/known/Virat_Kohli_portrait.jpeg')
+image_of_virat = face_recognition.load_image_file('./img/known/Virat Kohli.jpeg')
 virat_face_encoding = face_recognition.face_encodings(image_of_virat)[0]
 
-image_of_dhoni = face_recognition.load_image_file('./img/known/ms_dhoni.jpeg')
+image_of_dhoni = face_recognition.load_image_file('./img/known/MS Dhoni.jpeg')
 dhoni_face_encoding = face_recognition.face_encodings(image_of_dhoni)[0]
 
 #  Create arrays of encodings and names

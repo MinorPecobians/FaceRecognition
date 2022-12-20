@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta charset="ISO-8859-15">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>New User &#8211; LibraryAssist</title>
+    <link rel='stylesheet' id='bootstrap-css'
+        href='https://wordpress.library-management.com/wp-content/themes/library/css/bootstrap.min.css?ver=5.2.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='adminLTE-css'
+        href='https://wordpress.library-management.com/wp-content/themes/library/css/AdminLTE.min.css?ver=5.2.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='skin-css'
+        href='https://wordpress.library-management.com/wp-content/themes/library/css/_all-skins.min.css?ver=5.2.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='tooltipcss-css'
+        href='https://wordpress.library-management.com/wp-content/themes/library/css/angular-tooltips.css?ver=5.2.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='mainstyle-css'
+        href='https://wordpress.library-management.com/wp-content/themes/library/style.css?ver=5.2.2' type='text/css'
+        media='all' />
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/jquery.validate.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/angular.min.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/jquery.numeric.min.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/iziToast.min.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/angular-tooltips.min.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/jquery.datetimepicker.full.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/jquery.slides.min.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/webcam.min.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/ng-camera.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/angular-bootstrap-toggle.min.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/jquery.dataTables.min.js?ver=5.2.2'></script>
+    <script type='text/javascript'>
+        var myAjax = { "ajaxurl": "https:\/\/wordpress.library-management.com\/wp-admin\/admin-ajax.php", "loader_path": "https:\/\/wordpress.library-management.com\/wp-content\/themes\/library", "boostrap_loc": "https:\/\/wordpress.library-management.com\/wp-content\/themes\/library\/css\/bootstrap.min.css", "number_of_row": "25", "defined_fine": "1" };
+        var lang_msg = { "lg1": "Book title seems to be invalid.", "lg2": "Book title must't consist of more than 150 characters.", "lg3": "Price is required.", "lg4": "Password required.", "lg5": "Your password must consist at least 8 characters", "lg6": "Your password must consist no more than 15 characters", "lg7": "Password don't match!", "lg8": "Isbn is required.", "lg9": "Isbn should be of min 5 characters.", "lg10": "Isbn must consist of no more than 20 characters.", "lg11": "Book title is required.", "lg12": "Are your sure to approve the request?", "lg13": "Are your sure to dissapprove the request?", "lg14": "Book category is required.", "lg15": "Book consist must't consist of more than 50 characters.", "lg16": "Are your sure to delete this request?", "lg17": "Minimum 1 Qty is required.", "lg18": "Invalid data found.", "lg19": "First name is required.", "lg20": "First name seems to be invalid.", "lg21": "No file selected.Kindly select an Image file to upload", "lg22": "Are your sure to approve this due?", "lg23": "Last name is required.", "lg24": "Last name seems to be invalid.", "lg25": "Note :This action is isreversible.", "lg26": "Now you can update by just a single click.", "lg27": "Email is invalid.", "lg28": "Email Id is required.", "lg29": "Phone number is required.", "lg30": "Phone number seems to be invalid.", "lg31": "Address is required.", "lg32": "Address seems to be invalid.", "lg33": "Note: All the files which are updated is backuped in 'bck' folder.", "lg34": "City name is required.", "lg35": "Zip code seems to be invalid.", "lg36": "State is required.", "lg37": "Zip code is required.", "lg38": "Instituion name seems to be invalid.", "lg39": "START", "lg40": "Name is required.", "lg41": "Name seems to be invalid.", "lg42": "All files are updated.", "lg43": "files found to be updated.", "lg44": "Preparing file for update...", "lg45": "Backing up code in bck\/ folder...", "lg46": "Edit mode set.Now upload the image.", "lg47": "Library Popular Book Data", "lg48": "Are your sure to submit the request?", "lg49": "Book Issued", "lg50": "to you needs to be return to the library.", "lg51": "Please wait....", "lg52": "Book has already been Issued.", "lg53": "Book has been issued so get it returned before disabling it.", "lg54": "Url seems to be invalid.", "lg55": "Url is requried.", "lg56": "Content is requried.", "lg57": "Book ID is required.", "lg58": "Book ID seems to be invalid.", "lg59": "User ID is required.", "lg60": "User ID seems to be invalid.", "lg61": "Date of issue is required.", "lg62": "Date of return is required.", "lg63": "Book Name is required.", "lg64": "Book Name seems to be invalid.Min 10 characters.", "lg65": "Note is required.", "lg66": "Notes needs to be more than 50 characters.", "lg67": " Entries In Total", "lg68": "Are you sure?", "lg69": "Are your sure about to delete this book?", "lg70": "User has been deactivated!.", "lg71": "Content data is missing.", "lg72": "We couldn't find the book you are looking for, so fill it manually ..", "lg73": "Course name is required.", "lg74": "Course Year is required.", "lg75": "We are serching for the book details. Plz Wait..", "lg76": "Add book to this ISBN?", "lg77": "User has been deleted!.", "lg78": "User has been approved!.", "lg79": "Are your sure to approve this user?", "lg80": "Password updated successfully", "lg81": "No file selected.Kindly select an Csv file to upload" };
+    </script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/custom.js?ver=5.2.2'></script>
+
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/ng-file-upload.js?ver=5.2.2'></script>
+    <script type='text/javascript'
+        src='https://wordpress.library-management.com/wp-content/themes/library/js/custom_ang.js?ver=5.2.2'></script>
+    <link rel='https://api.w.org/' href='https://wordpress.library-management.com/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD"
+        href="https://wordpress.library-management.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+        href="https://wordpress.library-management.com/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.2.2" />
+    <link rel="canonical" href="https://wordpress.library-management.com/add-user/" />
+    <link rel='shortlink' href='https://wordpress.library-management.com/?p=51' />
+    <link rel="alternate" type="application/json+oembed"
+        href="https://wordpress.library-management.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.library-management.com%2Fadd-user%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="https://wordpress.library-management.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwordpress.library-management.com%2Fadd-user%2F&#038;format=xml" />
+</head>
+
+<body
+    class="page-template page-template-adduser page-template-adduser-php page page-id-51 logged-in hold-transition skin-blue sidebar-mini">
+    <div class="wrapper" id="style-5">
+        <div ng-controller="sideBarCtrl">
+            <header class="main-header">
+
+                <a href="https://google.com" class="logo">
+
+                    <span class="logo-mini"><b>LMS</b></span>
+
+                    <span class="logo-lg"><b>LibraryAssist </b></span>
+                </a>
+
+
+            </header>
+        </div>
+        <div class="content-wrapper">
+            <style>
+                .ng-camera-overlay {
+                    display: none;
+                }
+            </style>
+            <section class="content-header">
+                <h1>
+                    Registration Form
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="active">First Time Registration</li>
+                </ol>
+            </section>
+
+            <section class="content" ng-controller="userProfileAddCtrl">
+                <div class="row">
+                    <div class="col-sm-3 addStudCamera">
+                        <ng-camera output-height="250" output-width="270" image-format="jpeg" jpeg-quality="100"
+                            action-message="Take Picture" snapshot="vm.picture"
+                            flash-fallback-url="https://wordpress.library-management.com/wp-content/themes/library/js/webcam.swf"
+                            overlay-url="https://wordpress.library-management.com/wp-content/themes/library/img/overlay.png"
+                            shutter-url="https://wordpress.library-management.com/wp-content/themes/library/js/shutter.mp3"></ng-camera>
+                        <img ng-if="vm.picture" ng-src="{{vm.picture}}" alt="User Pic" style="margin-top: 10%;"
+                            class="img-responsive">
+                        <style>
+                            .ng-binding {
+                                border: 1px solid #dd4b39;
+                                background-color: #dd4b39;
+                                color: white;
+                                padding: 8px;
+                            }
+                        </style>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="tab-content shadow userProfileAddCtrl" style="border: 0;padding:0;">
+                            <div class="tab-pane active">
+                                <div class="panel panel-custom">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">
+                                            <strong>First Time Registration</strong>
+                                        </div>
+                                    </div>
+                                    <form class="form-horizontal" id="lib_add_user_profile_form" method="post">
+                                        <div class="panel-body form-horizontal">
+                                            <input type="hidden" name="action" value="addUserTodb">
+                                            <input type="hidden" name="addingBy" value="admin">
+                                            <input type="hidden" name="photo_code" id="photo_code">
+                                            <div class="form-group mb0 col-sm-6">
+
+                                                <label>First Name</label>
+
+                                                <input name="first_name" id="first_name" placeholder="First Name"
+                                                    class="form-control fix_radius" type="text">
+
+
+                                            </div>
+
+                                            <div class="form-group mb0 col-sm-6">
+
+                                                <label>Last Name</label>
+
+                                                <input name="last_name" id="last_name" placeholder="Last Name"
+                                                    class="form-control fix_radius" type="text">
+
+
+                                            </div>
+
+                                            <div class="form-group mb0 col-sm-6">
+
+                                                <label>Email</label>
+
+                                                <input name="email" id="email" tooltips
+                                                    tooltip-template="Make sure you put a proper email as this will be the username of this person & cannot be changed later."
+                                                    placeholder="E-Mail Address" class="form-control fix_radius"
+                                                    type="text">
+
+
+                                            </div>
+                                            <div class="form-group mb0 col-sm-6">
+                                                <label>Course Name</label>
+                                                <select id="course_name" name="course_name"
+                                                    class="form-control selectpicker fix_radius">
+                                                    <option value="">------------Select Course
+                                                        Name------------</option>
+                                                    <option>Aerospace Engineering</option>
+                                                    <option>Civil Engineering</option>
+                                                    <option>Computer Science & Engineering</option>
+                                                    <option>Electrical Engineering</option>
+                                                    <option>Electronics & Communication Engineering</option>
+                                                    <option>Mechanical Engineering</option>
+                                                    <option>Materials & Metallurgical Engineering</option>
+                                                    <option>Data Science</option>
+                                                    <option>Production and Industrial Engineering</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group mb0 col-sm-6">
+
+                                                <label>Year</label>
+
+                                                <select id="year_name" name="year_name"
+                                                    class="form-control selectpicker fix_radius">
+                                                    <option value="">------------Select Course Year------------</option>
+                                                    <option value="1">1st Year</option>
+                                                    <option value="2">2nd Year</option>
+                                                    <option value="3">3rd Year</option>
+                                                    <option value="4">4th Year</option>
+                                                </select>
+
+
+                                            </div>
+
+
+                                            <div class="form-group mb0 col-sm-6">
+
+                                                <label>Phone</label>
+
+                                                <input name="phone" tooltips
+                                                    tooltip-template="This will be his default password for login."
+                                                    id="phone" placeholder="9876543210" id="phone"
+                                                    class="form-control fix_radius" type="text">
+
+
+                                            </div>
+
+                                            <div class="form-group mb0 col-sm-12">
+
+                                                <label>Address</label>
+
+                                                <textarea class="form-control" name="address" id="address"
+                                                    row="2"></textarea>
+
+
+                                            </div>
+
+                                            <div class="form-group mb0 col-sm-6">
+
+                                                <label>City</label>
+
+
+                                                <input name="city" id="city" placeholder="City"
+                                                    class="form-control fix_radius" type="text">
+
+
+                                            </div>
+
+                                            <div class="form-group mb0 col-sm-6">
+
+                                                <label>State</label>
+
+                                                <select name="state" id="state"
+                                                    class="form-control selectpicker fix_radius">
+                                                    <option value=""> ------------Select State------------</option>
+
+                                                    <option value='Andaman and Nicobar Islands'>Andaman and Nicobar
+                                                        Islands</option>
+                                                    <option value='Andhra Pradesh'>Andhra Pradesh</option>
+                                                    <option value='Assam'>Assam</option>
+                                                    <option value='Bihar'>Bihar</option>
+                                                    <option value='Chandigarh'>Chandigarh</option>
+                                                    <option value='Dadra and Nagar Haveli'>Dadra and Nagar Haveli
+                                                    </option>
+                                                    <option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+                                                    <option value='Nagaland'>Nagaland</option>
+                                                    <option value='Pondicherry'>Pondicherry</option>
+                                                </select>
+
+
+
+
+                                            </div>
+
+
+                                            <div class="form-group mb0 col-sm-6">
+                                                <label>Zip </label>
+
+                                                <input name="zip" id="zip" placeholder="Zip Code"
+                                                    class="form-control fix_radius" type="text">
+
+                                            </div>
+
+                                            <!-- Future Scope -->
+                                            <div class="form-group mb0 col-sm-6">
+                                                <label tooltips
+                                                    tooltip-template="Will be availabe in future update.">Role</label>
+                                                <input name="role" id="role" value="Student" type="hidden">
+                                                <select class="form-control" disabled>
+                                                    <option value="Student" selected>Student</option>
+                                                    <option value="Teacher">Teacher</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group mb0 col-sm-12">
+                                                <label>Notes</label>
+
+                                                <textarea class="form-control fix_radius" id="note_on_user"
+                                                    name="note_on_user" placeholder="Note"></textarea>
+
+                                            </div>
+                                            <div class="form-group mb0 col-sm-12">
+                                                <button ng-click="addUserbtn()"
+                                                    class="btn btn-danger pull-right  add_btn_user pmd-ripple-effect"><span
+                                                        class="fa fa-floppy-o"></span>Save </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+        <script type='text/javascript'
+            src='https://wordpress.library-management.com/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+    </div>
+</body>
+
+</html>
+
+<style>
+    @media only screen and (max-width: 600px) {
+        #btnTry {
+            margin-bottom: 4% !important;
+        }
+    }
+</style>
+<script>
+    function show_payment() {
+        bootbox.dialog({
+            title: 'Payment can be made via (USD $20) i.e (~Rs.1200)',
+            message: 'Paypal [Most Preferred] or via CCAvenue .After the payment you will receive the source code within a hour or two on your paypal email id or on your personal email id.if you want it to be send on a different email-id then write us on lms_dev@outlook.com & we would mail it to you. NOTE : Kindly also check your spam folder if you have not received e-mail.',
+            buttons: {
+                noclose: {
+                    label: "Paypal",
+                    className: 'btn-success',
+                    callback: function () {
+                        window.open("https://www.paypal.me/Prince898/20");
+                        ;
+                        return false;
+                    }
+                },
+                ok: {
+                    label: "CCAvenue",
+                    className: 'btn-success',
+                    callback: function () {
+                        window.open("http://www.ricomart.com/billing/index.php");
+                        return false;
+                    }
+                }
+            }
+        });
+    }
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-91268321-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-91268321-2');
+</script>
+<style>
+    #rm_theme_data,
+    #bck_theme_data,
+    #frm_impt_demo {
+        display: none;
+    }
+</style>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>View Issued Books</title>
+    <link rel="stylesheet" href="CSS\profiletesting.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" id="bootstrap-css"href="https://wordpress.library-management.com/wp-content/themes/library/css/bootstrap.min.css?ver=5.2.2"type="text/css" media="all">   
+</head>
+
+<body style ="background-image: url('img.jpeg'); background-repeat: no-repeat; background-size: cover;">
+    <div class="wrapper">
+        <section class="content-header">
+            <ol class="breadcrumb">
+                <li><a href="index.html" target=”_blank”><i class="fa fa-home"></i> Home</a></li>
+                <li class="active">First Time Registration</li>
+            </ol>
+        </section>
+        <header>
+            <h1>Issued books</h1>
+        </header>
+        <div class="box-body" style="">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="hidden" id="user_id" name="user_id" value="1001" autocomplete="off">
+                    <table class="table table-bordered table-striped"
+                        style="font-size: small; margin-bottom: 10px;   padding: 10px; background-color: white;">
+                        <thead>
+                            <tr>
+                                <th style="display:none;">?</th>
+                                <th style="">Book ID</th>
+                                <th style="">Book Name</th>
+                                <th style="width: 187px;">Book Desc</th>
+                                <th style="">User ID</th>
+                                <th style="">Person Name</th>
+                                <th style="">Issued Date</th>
+                                <th style="">Date Due</th>
+                                <th style="">Days To Go</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="tb_manage_issue_book_container" style="background-color: white;">
+                            <tr ng-show="!results.length" class="ng-hide">
+                                <td style="display:none;"></td>
+                                <td class="ng-binding">9993497</td>
+                                <td class="ng-binding">Advances in Mechanical and Electronic Engineering</td>
+                                <td class="ng-binding">This book includes the volume 2 of the proceedings of...</td>
+                                <td class="ng-binding">1001</td>
+                                <td class="ng-binding">Kanishk Singla </td>
+                                <td class="ng-binding">09-12-2022</td>
+                                <td class="ng-binding">16-12-2022</td>
+                                <td class="ng-binding">7</td>
+
+
+                            </tr>
+                            <tr ng-show="!results.length" class="ng-hide">
+                                <td style="display:none;"></td>
+                                <td class="ng-binding">5825189</td>
+                                <td class="ng-binding">MORE Electronic Gadgets for the Evil Genius</td>
+                                <td class="ng-binding">This much anticipated follow-up to the wildly popular cultclassic
+                                    Electronic...</td>
+                                <td class="ng-binding">1001</td>
+                                <td class="ng-binding">Kanishk Singla </td>
+                                <td class="ng-binding">09-12-2022</td>
+                                <td class="ng-binding">16-12-2022</td>
+                                <td class="ng-binding">7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <p class="info-txt"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JavaScript\scr(Number_Checker).js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>

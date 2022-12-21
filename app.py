@@ -7,7 +7,7 @@ import numpy as np
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)
 
-image_of_japneet = face_recognition.load_image_file('./img/known/japneet.jpeg')
+image_of_japneet = face_recognition.load_image_file('./img/known/japneet.jpg')
 japneet_face_encoding = face_recognition.face_encodings(image_of_japneet)[0]
 
 image_of_dhoni = face_recognition.load_image_file('./img/known/MS Dhoni.jpeg')

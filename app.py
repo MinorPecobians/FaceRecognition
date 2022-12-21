@@ -7,8 +7,8 @@ import numpy as np
 app = Flask(__name__)
 camera = cv2.VideoCapture(0)
 
-image_of_virat = face_recognition.load_image_file('./img/known/Virat Kohli.jpeg')
-virat_face_encoding = face_recognition.face_encodings(image_of_virat)[0]
+image_of_japneet = face_recognition.load_image_file('./img/known/japneet.jpeg')
+japneet_face_encoding = face_recognition.face_encodings(image_of_japneet)[0]
 
 image_of_dhoni = face_recognition.load_image_file('./img/known/MS Dhoni.jpeg')
 dhoni_face_encoding = face_recognition.face_encodings(image_of_dhoni)[0]
@@ -18,13 +18,13 @@ ishwar_face_encoding = face_recognition.face_encodings(image_of_ishwar)[0]
 
 #  Create arrays of encodings and names
 known_face_encodings = [
-  virat_face_encoding,
+  japneet_face_encoding,
   dhoni_face_encoding,
   ishwar_face_encoding,
 ]
 
 known_face_names = [
-  "Virat Kohli",
+  "Japneet Singh",
   "MS Dhoni",
   "Ishwarendra"
 ]

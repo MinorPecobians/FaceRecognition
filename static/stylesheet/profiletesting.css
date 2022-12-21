@@ -12,7 +12,10 @@ body{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* background-image:url("Backgrounds/istockphoto-1222263136-612x612.jpg"); */
+  /* background-image: url("./../image/bg.png");
+  background-repeat: no-repeat;
+  background-size: contain; */
+  background-image:url("Backgrounds/istockphoto-1222263136-612x612.jpg");
   /* #AA57CC; */
 }
 ::selection{

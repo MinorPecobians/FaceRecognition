@@ -103,5 +103,9 @@ def form():
     """Form"""
     return render_template('form.html')
 
+@app.route('/issuedBooks/Kanishk')
+def issuedBooks():
+    return render_template('issuedBooks.html')
+
 if __name__ == "__main__":
     app.run(debug = True)
